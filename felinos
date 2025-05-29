@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curiosidades sobre Gatos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fefefe;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #444;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: block;
+    }
+    nav a:hover {
+      background-color: #666;
+    }
+    main {
+      padding: 20px;
+    }
+    section {
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Curiosidades sobre Gatos</h1>
+  </header>
+  <nav>
+    <a href="#" onclick="mostrarPagina('sobre')">Sobre Felinos</a>
+    <a href="#" onclick="mostrarPagina('curiosidades')">Curiosidades</a>
+    <a href="#" onclick="mostrarPagina('historia')">História</a>
+  </nav>
+  <main>
+    <section id="sobre" class="active">
+      <h2>Sobre Felinos</h2>
+      <p>Os gatos domésticos pertencem à família dos felídeos, que inclui também leões, tigres e leopardos. São animais carnívoros, ágeis e conhecidos por sua independência.</p>
+    </section><section id="curiosidades">
+  <h2>Curiosidades</h2>
+  <ul>
+    <li>Gatos dormem em média 13 a 16 horas por dia.</li>
+    <li>Eles têm 32 músculos em cada orelha.</li>
+    <li>O ronronar dos gatos pode ter efeito calmante tanto para eles quanto para humanos.</li>
+    <li>Gatos enxergam melhor no escuro do que humanos.</li>
+  </ul>
+</section>
+
+<section id="historia">
+  <h2>História</h2>
+  <p>Os gatos foram domesticados há cerca de 9.000 anos no Oriente Médio. No Egito Antigo, eram considerados sagrados e protegidos por leis severas.</p>
+</section>
+
+  </main>  <script>
+    function mostrarPagina(paginaId) {
+      const secoes = document.querySelectorAll('main section');
+      secoes.forEach(secao => {
+        secao.classList.remove('active');
+      });
+
+      const secaoAtiva = document.getElementById(paginaId);
+      if (secaoAtiva) {
+        secaoAtiva.classList.add('active');
+      }
+    }
+  </script></body>
+</html>
